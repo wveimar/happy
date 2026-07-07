@@ -20,6 +20,7 @@
   <title>Happy Time Entertainment | Cusco, Perú</title>
 
   <!-- Google Fonts -->
+  <link rel="icon" href="src/images/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
@@ -58,7 +59,7 @@
   <header class="site-header" id="header">
     <div class="container header__inner">
       <a href="#inicio" class="logo" aria-label="Happy Time Entertainment">
-        <span class="logo__mark">🎪</span>
+        <img src="src/images/logo.png" alt="Logo Happy Time Entertainment" class="logo__image" />
         <span class="logo__text">Happy Time</span>
       </a>
 
@@ -106,7 +107,7 @@
             <span>Cotizar mi evento</span>
             <span class="btn__arrow">→</span>
           </a>
-          <a href="https://wa.me/51992034877" class="btn btn--ghost" target="_blank" rel="noopener">
+          <a href="https://wa.me/51992034877?text=Hola%20Happy%20Time%20Entertainment%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20evento" class="btn btn--ghost" target="_blank" rel="noopener">
             <span class="btn__icon">💬</span> WhatsApp
           </a>
         </div>
@@ -261,54 +262,72 @@
 
         <div class="shows__slider" role="region" aria-label="Galería de espectáculos">
           <article class="show-card reveal" data-label="Show de Payasos" data-delay="0">
-            <div class="show-card__visual show-card__visual--clown"></div>
+            <div class="show-card__visual show-card__visual--clown">
+              <img src="src/images/payasos.jpeg" alt="Show de payasos" />
+            </div>
             <div class="show-card__content">
-              <h3 class="show-card__title">Show de Payasos</h3>
+              <div class="show-card__ribbon">Show de Payasos</div>
+              <h3 class="show-card__title">Risas, juegos y sorpresas</h3>
               <p class="show-card__text">Risas garantizadas con payasos divertidos, juegos y sorpresas para toda la familia.</p>
               <span class="show-card__rating">★ ★ ★</span>
             </div>
           </article>
 
           <article class="show-card reveal" data-label="Show de Luces" data-delay="100">
-            <div class="show-card__visual show-card__visual--lights">💡</div>
+            <div class="show-card__visual show-card__visual--lights">
+              <img src="src/images/IMG_2645.PNG" alt="Show de luces LED" />
+            </div>
             <div class="show-card__content">
-              <h3 class="show-card__title">Show de Luces</h3>
+              <div class="show-card__ribbon">Show de Luces</div>
+              <h3 class="show-card__title">Iluminación impactante</h3>
               <p class="show-card__text">Coreografías impactantes con luces LED, acrobacias y efectos visuales de última tecnología.</p>
               <span class="show-card__rating">★ ★ ★</span>
             </div>
           </article>
 
           <article class="show-card reveal" data-label="Zancos y Personajes" data-delay="200">
-            <div class="show-card__visual show-card__visual--stilts">🎭</div>
+            <div class="show-card__visual show-card__visual--stilts">
+              <img src="src/images/personajes.jpeg" alt="Zancos y personajes temáticos" />
+            </div>
             <div class="show-card__content">
-              <h3 class="show-card__title">Zancos y Personajes</h3>
+              <div class="show-card__ribbon">Zancos y Personajes</div>
+              <h3 class="show-card__title">Elegancia en altura</h3>
               <p class="show-card__text">Imponentes zanqueros que traen color, elegancia y fantasía a tu evento.</p>
               <span class="show-card__rating">★ ★ ★</span>
             </div>
           </article>
 
           <article class="show-card reveal" data-label="Show de Fuego" data-delay="300">
-            <div class="show-card__visual show-card__visual--fire">🔥</div>
+            <div class="show-card__visual show-card__visual--fire">
+              <img src="src/images/baileFuego.jpeg" alt="Show de fuego" />
+            </div>
             <div class="show-card__content">
-              <h3 class="show-card__title">Show de Fuego</h3>
+              <div class="show-card__ribbon">Show de Fuego</div>
+              <h3 class="show-card__title">Fuerza y pasión</h3>
               <p class="show-card__text">Fuerza, habilidad y pasión en un espectáculo que te dejará sin aliento.</p>
               <span class="show-card__rating">★ ★ ★</span>
             </div>
           </article>
 
           <article class="show-card reveal" data-label="Show de Horas Locas" data-delay="400">
-            <div class="show-card__visual show-card__visual--party">🎉</div>
+            <div class="show-card__visual show-card__visual--party">
+              <img src="src/images/performance.jpeg" alt="Show de horas locas" />
+            </div>
             <div class="show-card__content">
-              <h3 class="show-card__title">Horas Locas</h3>
+              <div class="show-card__ribbon">Show de Horas Locas</div>
+              <h3 class="show-card__title">Música, baile y energía</h3>
               <p class="show-card__text">Música, baile, animación y locura garantizada para mantener a todos en movimiento.</p>
               <span class="show-card__rating">★ ★ ★</span>
             </div>
           </article>
 
           <article class="show-card reveal" data-label="Y Mucho Más" data-delay="500">
-            <div class="show-card__visual show-card__visual--more">✨</div>
+            <div class="show-card__visual show-card__visual--more">
+              <img src="src/images/malabares.jpeg" alt="Show y mucho más" />
+            </div>
             <div class="show-card__content">
-              <h3 class="show-card__title">Y Mucho Más...</h3>
+              <div class="show-card__ribbon">Y Mucho Más...</div>
+              <h3 class="show-card__title">Experiencias únicas</h3>
               <p class="show-card__text">Cuentacuentos, malabares, performances y experiencias participativas a tu medida.</p>
               <span class="show-card__rating">★ ★ ★</span>
             </div>
@@ -395,7 +414,7 @@
           </ul>
 
           <div class="contact__socials">
-            <a href="https://wa.me/51992034877" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">💬</a>
+            <a href="https://wa.me/51992034877?text=Hola%20Happy%20Time%20Entertainment%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20evento" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">💬</a>
             <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">📘</a>
             <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">📷</a>
           </div>
@@ -443,9 +462,9 @@
   </footer>
 
   <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/51992034877" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+  <a href="https://wa.me/51992034877?text=Hola%20Happy%20Time%20Entertainment%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20evento" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
     <span class="whatsapp-float__pulse"></span>
-    <span class="whatsapp-float__icon"></span>
+    <span class="whatsapp-float__icon">💬</span>
   </a>
 
   <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" defer></script>

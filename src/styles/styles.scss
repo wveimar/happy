@@ -187,19 +187,24 @@ ul { list-style: none; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.2rem;
   z-index: 101;
+}
 
-  &__mark { font-size: 1.5rem; }
-  &__text {
-    background: linear-gradient(135deg, var(--color-gold), var(--color-magenta));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+.logo__image {
+  width: 42px;
+  height: auto;
+  display: block;
+}
+
+.logo__text {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 // Hamburguesa
@@ -650,24 +655,6 @@ ul { list-style: none; }
   backdrop-filter: blur(18px);
   transition: transform var(--duration) var(--ease-out), border-color var(--duration), box-shadow var(--duration);
 
-  &::before {
-    content: attr(data-label);
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    padding: 0.8rem 1rem;
-    font-family: var(--font-display);
-    font-size: 0.75rem;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: var(--color-gold);
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 200, 87, 0.2);
-    border-radius: 999px;
-    z-index: 3;
-  }
-
   &::after {
     content: '';
     position: absolute;
@@ -681,22 +668,26 @@ ul { list-style: none; }
 
   &__visual {
     min-height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
     position: relative;
     overflow: hidden;
+    display: block;
     background-size: cover;
     background-position: center;
-    padding: 1.5rem;
-    color: rgba(255,255,255,0.9);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.08) contrast(1.05);
+    }
 
     &::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(11, 11, 18, 0.8));
+      background: linear-gradient(180deg, transparent 45%, rgba(11, 11, 18, 0.88));
+      pointer-events: none;
     }
 
     &--clown { background: linear-gradient(135deg, #FF2E93, #8B00FF); }
@@ -709,9 +700,25 @@ ul { list-style: none; }
 
   &__content { padding: 1.5rem; position: relative; z-index: 1; }
 
+  &__ribbon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(200, 16, 46, 0.95), rgba(255, 46, 147, 0.95));
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
   &__title {
     font-family: var(--font-display);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin-bottom: 0.75rem;
   }
 
@@ -948,9 +955,12 @@ ul { list-style: none; }
   color: #fff;
   box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
   z-index: 90;
-  transition: transform var(--duration);
+  transition: transform var(--duration), box-shadow var(--duration);
 
-  &:hover { transform: scale(1.1); }
+  &:hover {
+    transform: scale(1.08);
+    box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+  }
 
   &__pulse {
     position: absolute;
@@ -961,7 +971,12 @@ ul { list-style: none; }
     z-index: -1;
   }
 
-  &__icon { position: relative; z-index: 2; }
+  &__icon {
+    position: relative;
+    z-index: 2;
+    font-size: 1.9rem;
+    line-height: 1;
+  }
 }
 
 @keyframes pulse {
