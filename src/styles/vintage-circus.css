@@ -1,0 +1,800 @@
+/* =========================================================
+   HAPPY TIME ENTERTAINMENT — VINTAGE CIRCUS STYLE
+   Cartel de Circo Vintage Elegante
+   ========================================================= */
+
+:root {
+  /* Paleta de colores vintage circus */
+  --color-bg: #D4C5A3; /* Beige/pergamino antiguo */
+  --color-bg-dark: #B8A88A;
+  --color-surface: rgba(212, 197, 163, 0.95);
+  --color-border: #8B1A1A; /* Rojo granate profundo */
+  --color-border-light: #A52A2A;
+  --color-gold: #D4AF37; /* Dorado/ocre */
+  --color-gold-light: #E5C55A;
+  --color-gold-dark: #B8962E;
+  --color-cream: #FFFDD0; /* Blanco crema */
+  --color-sepia: #3E2723; /* Marrón oscuro/sepia para texto */
+  --color-sepia-light: #5D4037;
+  
+  /* Fuentes vintage */
+  --font-display: 'Syne', 'Space Grotesk', Georgia, serif;
+  --font-body: 'Inter', Georgia, serif;
+  --font-accent: 'Syne', cursive;
+  
+  /* Bordes y radios */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  /* Sombras vintage */
+  --shadow-card: 0 4px 20px rgba(62, 39, 35, 0.3);
+  --shadow-glow-gold: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ============================================
+   FONDO DE PERGAMINO TEXTURIZADO
+   ============================================ */
+body {
+  background-color: var(--color-bg);
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, rgba(139, 26, 26, 0.03) 0%, transparent 50%, rgba(139, 26, 26, 0.03) 100%);
+  color: var(--color-sepia);
+}
+
+/* Eliminar orbes animados del fondo cyber */
+.ambient-bg {
+  display: none;
+}
+
+/* ============================================
+   BORDE EXTERIOR PRINCIPAL
+   ============================================ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 10px;
+  pointer-events: none;
+  z-index: 1000;
+  border: 8px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 
+    inset 0 0 0 3px var(--color-gold),
+    inset 0 0 30px rgba(139, 26, 26, 0.3);
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(212, 175, 55, 0.1) 10px,
+      rgba(212, 175, 55, 0.1) 20px
+    );
+}
+
+/* Patrón de filigrana en las esquinas */
+body::after {
+  content: '✦ ✦ ✦';
+  position: fixed;
+  font-size: 2rem;
+  color: var(--color-gold);
+  z-index: 1001;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 1rem;
+}
+
+/* ============================================
+   HEADER / NAV VINTAGE
+   ============================================ */
+.site-header {
+  background: linear-gradient(180deg, var(--color-border) 0%, var(--color-border-light) 100%);
+  border-bottom: 3px solid var(--color-gold);
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(62, 39, 35, 0.4);
+}
+
+.site-header.scrolled {
+  background: linear-gradient(180deg, var(--color-border) 0%, #6B0F0F 100%);
+}
+
+.logo__text {
+  background: linear-gradient(135deg, var(--color-cream), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-accent);
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-toggle {
+  background: rgba(212, 175, 55, 0.2);
+  border: 2px solid var(--color-gold);
+}
+
+.nav-toggle__bar {
+  background: var(--color-cream);
+}
+
+.main-nav {
+  background: rgba(139, 26, 26, 0.98);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 3px solid var(--color-gold);
+}
+
+.main-nav__link {
+  color: var(--color-cream);
+  font-family: var(--font-accent);
+}
+
+.main-nav__link:hover {
+  color: var(--color-gold);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.main-nav__link--cta {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================================
+   TÍTULOS Y MARCOS FESTONEADOS
+   ============================================ */
+.section-tag {
+  background: linear-gradient(135deg, var(--color-border), var(--color-border-light));
+  color: var(--color-cream);
+  border: 2px solid var(--color-gold);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-accent);
+  letter-spacing: 0.15em;
+  box-shadow: 
+    0 2px 10px rgba(139, 26, 26, 0.3),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.3);
+  position: relative;
+}
+
+.section-tag::before,
+.section-tag::after {
+  content: '★';
+  color: var(--color-gold);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.section-tag::before {
+  left: 0.5rem;
+}
+
+.section-tag::after {
+  right: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-accent);
+  font-weight: 800;
+  color: var(--color-sepia);
+  text-shadow: 1px 1px 0 rgba(255, 253, 208, 0.5);
+}
+
+.section-title .text-gradient {
+  background: linear-gradient(135deg, var(--color-border), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Marco festoneado para títulos principales */
+.section-header {
+  position: relative;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 10px;
+  background: 
+    radial-gradient(circle at 10px 5px, var(--color-border) 8px, transparent 9px),
+    radial-gradient(circle at 30px 5px, var(--color-border) 8px, transparent 9px),
+    radial-gradient(circle at 50px 5px, var(--color-border) 8px, transparent 9px),
+    radial-gradient(circle at 70px 5px, var(--color-border) 8px, transparent 9px),
+    radial-gradient(circle at 90px 5px, var(--color-border) 8px, transparent 9px);
+  background-size: 100px 10px;
+  background-repeat: repeat-x;
+  opacity: 0.6;
+}
+
+/* ============================================
+   HERO SECTION VINTAGE
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%),
+    var(--color-bg);
+}
+
+.hero__decor {
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(139, 26, 26, 0.1), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.08), transparent 50%);
+}
+
+.hero__tag {
+  color: var(--color-border);
+  font-family: var(--font-accent);
+  border: 2px solid var(--color-border);
+  background: var(--color-cream);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(139, 26, 26, 0.2);
+}
+
+.hero__title {
+  color: var(--color-sepia);
+  text-shadow: 2px 2px 0 rgba(255, 253, 208, 0.5);
+}
+
+.hero__title-line--accent {
+  background: linear-gradient(135deg, var(--color-border), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__subtitle {
+  color: var(--color-sepia-light);
+}
+
+.hero__quote {
+  color: var(--color-border);
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+  font-family: var(--font-accent);
+  font-style: italic;
+  background: rgba(255, 253, 208, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.hero__quote-mark {
+  color: var(--color-gold);
+  font-size: 2.5rem;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-border), var(--color-border-light));
+  color: var(--color-cream);
+  border: 2px solid var(--color-gold);
+  box-shadow: 
+    var(--shadow-glow-gold),
+    0 4px 15px rgba(139, 26, 26, 0.4);
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, var(--color-border-light), var(--color-border));
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+
+.btn--ghost {
+  background: rgba(212, 175, 55, 0.15);
+  border: 2px solid var(--color-border);
+  color: var(--color-sepia);
+  font-family: var(--font-accent);
+}
+
+.btn--ghost:hover {
+  background: rgba(212, 175, 55, 0.3);
+  border-color: var(--color-gold);
+  color: var(--color-border);
+}
+
+.hero__scroll-line {
+  background: linear-gradient(to bottom, var(--color-gold), transparent);
+}
+
+.hero__scroll-text {
+  color: var(--color-sepia-light);
+  font-family: var(--font-accent);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about {
+  background: 
+    linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+}
+
+.about__visual-card {
+  background: linear-gradient(135deg, rgba(139, 26, 26, 0.1), rgba(212, 175, 55, 0.15));
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 
+    var(--shadow-card),
+    inset 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.about__visual-card::before {
+  content: '✦ ✦ ✦';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-gold);
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+}
+
+.about__text {
+  color: var(--color-sepia);
+}
+
+.about__text strong {
+  color: var(--color-border);
+  font-weight: 700;
+}
+
+.stat__number {
+  background: linear-gradient(135deg, var(--color-border), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-accent);
+  font-weight: 800;
+}
+
+.mv-card {
+  background: rgba(255, 253, 208, 0.5);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-border), var(--color-gold), var(--color-border));
+}
+
+.mv-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.mv-card__icon {
+  font-size: 2.5rem;
+}
+
+.mv-card__title {
+  color: var(--color-border);
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+.mv-card__text {
+  color: var(--color-sepia);
+}
+
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+.services {
+  background: 
+    linear-gradient(180deg, transparent, rgba(139, 26, 26, 0.03), transparent);
+}
+
+.service-card {
+  background: rgba(255, 253, 208, 0.6);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-border), var(--color-gold), var(--color-border));
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0);
+  transition: box-shadow var(--duration) var(--ease-out);
+  pointer-events: none;
+}
+
+.service-card:hover,
+.service-card:active {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+}
+
+.service-card:hover::after {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+}
+
+.service-card__number {
+  color: rgba(139, 26, 26, 0.15);
+  font-family: var(--font-accent);
+  font-weight: 800;
+}
+
+.service-card__icon {
+  font-size: 3rem;
+}
+
+.service-card__title {
+  color: var(--color-border);
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+.service-card__text {
+  color: var(--color-sepia);
+}
+
+.service-card__link {
+  color: var(--color-border);
+  font-family: var(--font-accent);
+  font-weight: 600;
+}
+
+.service-card__link:hover {
+  color: var(--color-gold);
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   SHOWS / ESPECTÁCULOS CARDS
+   ============================================ */
+.shows {
+  background: 
+    linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+}
+
+.show-card {
+  background: rgba(255, 253, 208, 0.7);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 
+    var(--shadow-card),
+    0 0 0 2px rgba(212, 175, 55, 0.3),
+    0 10px 40px rgba(139, 26, 26, 0.2);
+  overflow: hidden;
+  transition: all var(--duration) var(--ease-out);
+}
+
+.show-card::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0);
+  transition: box-shadow var(--duration) var(--ease-out);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.show-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: 
+    var(--shadow-glow-gold),
+    0 15px 50px rgba(139, 26, 26, 0.3);
+}
+
+.show-card:hover::after {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+}
+
+.show-card__visual {
+  border-bottom: 3px solid var(--color-border);
+}
+
+.show-card__visual img {
+  filter: saturate(1.1) contrast(1.05) sepia(0.1);
+}
+
+.show-card__ribbon {
+  background: linear-gradient(135deg, var(--color-border), var(--color-border-light));
+  color: var(--color-cream);
+  font-family: var(--font-accent);
+  border: 2px solid var(--color-gold);
+  box-shadow: 0 4px 15px rgba(139, 26, 26, 0.3);
+  padding: 0.5rem 1.25rem;
+}
+
+.show-card__title {
+  color: var(--color-border);
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+.show-card__text {
+  color: var(--color-sepia);
+}
+
+.show-card__rating {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Estrellas decorativas doradas */
+.show-card::before {
+  content: '★';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  z-index: 10;
+}
+
+/* ============================================
+   GALERÍA
+   ============================================ */
+.gallery {
+  background: 
+    linear-gradient(180deg, transparent, rgba(139, 26, 26, 0.03), transparent);
+}
+
+.gallery-item {
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all var(--duration) var(--ease-out);
+}
+
+.gallery-item:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-glow-gold);
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  filter: saturate(1.1) contrast(1.05) sepia(0.15);
+  transition: filter var(--duration) var(--ease-out);
+}
+
+.gallery-item:hover img {
+  filter: saturate(1.2) contrast(1.1);
+}
+
+/* ============================================
+   CONTACTO
+   ============================================ */
+.contact {
+  background: 
+    linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.08), transparent);
+}
+
+.contact-card {
+  background: rgba(255, 253, 208, 0.7);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: 3rem 2rem;
+}
+
+.contact-card::before {
+  content: '✦ ✦ ✦';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  background: var(--color-bg);
+  padding: 0 1rem;
+}
+
+.contact-info__item {
+  color: var(--color-sepia);
+}
+
+.contact-info__label {
+  color: var(--color-border);
+  font-family: var(--font-accent);
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 253, 208, 0.8);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-sepia);
+  font-family: var(--font-body);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--color-sepia-light);
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, var(--color-border), var(--color-border-light));
+  color: var(--color-cream);
+  border: 2px solid var(--color-gold);
+  font-family: var(--font-accent);
+  font-weight: 700;
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, var(--color-border-light), var(--color-border));
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: linear-gradient(180deg, var(--color-border) 0%, #5A0A0A 100%);
+  border-top: 3px solid var(--color-gold);
+  color: var(--color-cream);
+}
+
+.footer-logo__text {
+  background: linear-gradient(135deg, var(--color-cream), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-accent);
+  font-weight: 800;
+}
+
+.footer-nav__link {
+  color: var(--color-cream);
+  font-family: var(--font-accent);
+}
+
+.footer-nav__link:hover {
+  color: var(--color-gold);
+}
+
+.social-links__link {
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.social-links__link:hover {
+  background: rgba(212, 175, 55, 0.3);
+  color: var(--color-cream);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  color: rgba(255, 253, 208, 0.7);
+  font-family: var(--font-accent);
+}
+
+/* ============================================
+   ELEMENTOS DECORATIVOS ADICIONALES
+   ============================================ */
+
+/* Estrellas doradas decorativas cerca de títulos */
+h1::before,
+h2::before,
+h3::before {
+  content: '★ ';
+  color: var(--color-gold);
+  font-size: 0.8em;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+h1::after,
+h2::after,
+h3::after {
+  content: ' ★';
+  color: var(--color-gold);
+  font-size: 0.8em;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Separador decorativo */
+.divider-vintage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  color: var(--color-gold);
+}
+
+.divider-vintage::before,
+.divider-vintage::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+}
+
+.divider-vintage span {
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  body::before {
+    inset: 5px;
+    border-width: 4px;
+  }
+  
+  .section-tag::before,
+  .section-tag::after {
+    display: none;
+  }
+  
+  h1::before,
+  h1::after,
+  h2::before,
+  h2::after,
+  h3::before,
+  h3::after {
+    display: none;
+  }
+}
+
+/* ============================================
+   ANIMACIONES REVEAL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
