@@ -1,0 +1,16 @@
+{
+  "name": "happy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass styles.scss styles.css",
+    "sass:watch": "sass --watch styles.scss:styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

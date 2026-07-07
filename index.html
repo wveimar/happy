@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Happy Time Entertainment - Espectáculos artísticos, entretenimiento y experiencias interactivas en Cusco, Perú." />
+  <title>Happy Time Entertainment | Cusco, Perú</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Fondo animado global (orbes de luz) -->
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Happy Time Entertainment">
+        <span class="logo__mark">🎪</span>
+        <span class="logo__text">Happy Time</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a href="#inicio" class="main-nav__link">Inicio</a></li>
+          <li><a href="#nosotros" class="main-nav__link">Nosotros</a></li>
+          <li><a href="#servicios" class="main-nav__link">Servicios</a></li>
+          <li><a href="#espectaculos" class="main-nav__link">Espectáculos</a></li>
+          <li><a href="#galeria" class="main-nav__link">Galería</a></li>
+          <li><a href="#contacto" class="main-nav__link main-nav__link--cta">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__decor" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__tag reveal">Cusco · Perú</p>
+        <h1 class="hero__title reveal" id="hero-title">
+          <span class="hero__title-line">Hacemos de tu evento</span>
+          <span class="hero__title-line hero__title-line--accent">un momento inolvidable</span>
+        </h1>
+        <p class="hero__subtitle reveal">
+          Espectáculos artísticos · Entretenimiento · Experiencias interactivas
+        </p>
+
+        <blockquote class="hero__quote reveal">
+          <span class="hero__quote-mark">"</span>
+          Solo se deja de ser niño cuando se deja de sonreír
+          <span class="hero__quote-mark">"</span>
+        </blockquote>
+
+        <div class="hero__actions reveal">
+          <a href="#contacto" class="btn btn--primary">
+            <span>Cotizar mi evento</span>
+            <span class="btn__arrow">→</span>
+          </a>
+          <a href="https://wa.me/51992034877" class="btn btn--ghost" target="_blank" rel="noopener">
+            <span class="btn__icon">💬</span> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span class="hero__scroll-text">Scroll</span>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="about" id="nosotros" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="about__visual-card">
+            <span class="about__visual-emoji">🎭</span>
+            <p class="about__visual-label">Arte · Tradición · Entretenimiento</p>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <span class="section-tag reveal">Quiénes Somos</span>
+          <h2 class="section-title reveal" id="about-title">
+            Fusión <span class="text-gradient">andina</span> y circense
+          </h2>
+          <p class="about__text reveal">
+            Somos una organización empresarial dedicada al desarrollo de
+            <strong>espectáculos artísticos</strong>, entretenimiento y experiencias
+            interactivas para eventos públicos, privados, corporativos y culturales.
+          </p>
+          <p class="about__text reveal">
+            Fusionamos la riqueza de la <strong>cultura andina</strong> con las artes
+            circenses contemporáneas, creando propuestas únicas que revaloran la
+            identidad cultural del Cusco.
+          </p>
+
+          <div class="about__stats reveal">
+            <div class="stat">
+              <span class="stat__number">+10</span>
+              <span class="stat__label">Años de experiencia</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">200+</span>
+              <span class="stat__label">Eventos realizados</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">100%</span>
+              <span class="stat__label">Personajes originales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misión / Visión -->
+      <div class="container mv-grid">
+        <article class="mv-card reveal">
+          <span class="mv-card__icon">⭐</span>
+          <h3 class="mv-card__title">Misión</h3>
+          <p class="mv-card__text">
+            Crear experiencias artísticas innovadoras y memorables a través de
+            espectáculos de alto impacto visual, interacción con el público y
+            propuestas escénicas únicas.
+          </p>
+        </article>
+        <article class="mv-card reveal">
+          <span class="mv-card__icon">🌟</span>
+          <h3 class="mv-card__title">Visión</h3>
+          <p class="mv-card__text">
+            Ser una empresa líder en entretenimiento y producción artística a nivel
+            nacional e internacional, reconocida por nuestra creatividad, innovación
+            y capacidad de transformar el arte escénico.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portafolio Estratégico</span>
+          <h2 class="section-title" id="services-title">
+            Nuestros <span class="text-gradient">servicios</span>
+          </h2>
+          <p class="section-subtitle">
+            Diseñamos intervenciones artísticas a la medida de los objetivos de
+            promoción turística, cultural e institucional de la región.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card reveal" data-delay="0">
+            <span class="service-card__number">01</span>
+            <span class="service-card__icon">🎭</span>
+            <h3 class="service-card__title">Personajes Temáticos</h3>
+            <p class="service-card__text">
+              Desarrollo de personajes personalizados para campañas institucionales,
+              activaciones de marca, ferias gastronómicas y eventos culturales.
+            </p>
+            <a href="#contacto" class="service-card__link">Solicitar info →</a>
+          </article>
+
+          <article class="service-card reveal" data-delay="100">
+            <span class="service-card__number">02</span>
+            <span class="service-card__icon">🎪</span>
+            <h3 class="service-card__title">Dinamización de Espacios</h3>
+            <p class="service-card__text">
+              Zanqueros temáticos, clown interactivo y animación lúdica para
+              pasacalles, desfiles, ferias y recepciones oficiales.
+            </p>
+            <a href="#contacto" class="service-card__link">Solicitar info →</a>
+          </article>
+
+          <article class="service-card reveal" data-delay="200">
+            <span class="service-card__number">03</span>
+            <span class="service-card__icon">🔥</span>
+            <h3 class="service-card__title">Shows Artísticos</h3>
+            <p class="service-card__text">
+              Presentaciones escénicas con pertinencia cultural andina: shows de
+              fuego, luces LED, clown y cuentacuentos para festivales y conmemoraciones.
+            </p>
+            <a href="#contacto" class="service-card__link">Solicitar info →</a>
+          </article>
+
+          <article class="service-card reveal" data-delay="300">
+            <span class="service-card__number">04</span>
+            <span class="service-card__icon">🚀</span>
+            <h3 class="service-card__title">Activaciones BTL</h3>
+            <p class="service-card__text">
+              Estrategias de promoción comercial y visual para marcas, ferias
+              artesanales, campañas institucionales y activaciones públicas o privadas.
+            </p>
+            <a href="#contacto" class="service-card__link">Solicitar info →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPECTÁCULOS -->
+    <section class="shows" id="espectaculos" aria-labelledby="shows-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Nuestros Shows</span>
+          <h2 class="section-title" id="shows-title">
+            Espectáculos <span class="text-gradient">destacados</span>
+          </h2>
+          <p class="section-subtitle">
+            Shows para todo tipo de eventos: infantiles, familiares, corporativos y más.
+          </p>
+        </div>
+
+        <div class="shows__slider" role="region" aria-label="Galería de espectáculos">
+          <article class="show-card reveal" data-delay="0">
+            <div class="show-card__visual show-card__visual--clown"></div>
+            <div class="show-card__content">
+              <h3 class="show-card__title">Show de Payasos</h3>
+              <p class="show-card__text">Risas garantizadas con payasos divertidos, juegos y sorpresas para toda la familia.</p>
+              <span class="show-card__rating">★ ★ ★</span>
+            </div>
+          </article>
+
+          <article class="show-card reveal" data-delay="100">
+            <div class="show-card__visual show-card__visual--lights">💡</div>
+            <div class="show-card__content">
+              <h3 class="show-card__title">Show de Luces</h3>
+              <p class="show-card__text">Coreografías impactantes con luces LED, acrobacias y efectos visuales de última tecnología.</p>
+              <span class="show-card__rating">★ ★ ★</span>
+            </div>
+          </article>
+
+          <article class="show-card reveal" data-delay="200">
+            <div class="show-card__visual show-card__visual--stilts">🎭</div>
+            <div class="show-card__content">
+              <h3 class="show-card__title">Zancos y Personajes</h3>
+              <p class="show-card__text">Imponentes zanqueros que traen color, elegancia y fantasía a tu evento.</p>
+              <span class="show-card__rating">★ ★ ★</span>
+            </div>
+          </article>
+
+          <article class="show-card reveal" data-delay="300">
+            <div class="show-card__visual show-card__visual--fire">🔥</div>
+            <div class="show-card__content">
+              <h3 class="show-card__title">Show de Fuego</h3>
+              <p class="show-card__text">Fuerza, habilidad y pasión en un espectáculo que te dejará sin aliento.</p>
+              <span class="show-card__rating">★ ★ ★</span>
+            </div>
+          </article>
+
+          <article class="show-card reveal" data-delay="400">
+            <div class="show-card__visual show-card__visual--party">🎉</div>
+            <div class="show-card__content">
+              <h3 class="show-card__title">Horas Locas</h3>
+              <p class="show-card__text">Música, baile, animación y locura garantizada para mantener a todos en movimiento.</p>
+              <span class="show-card__rating">★ ★ ★</span>
+            </div>
+          </article>
+
+          <article class="show-card reveal" data-delay="500">
+            <div class="show-card__visual show-card__visual--more">✨</div>
+            <div class="show-card__content">
+              <h3 class="show-card__title">Y Mucho Más...</h3>
+              <p class="show-card__text">Cuentacuentos, malabares, performances y experiencias participativas a tu medida.</p>
+              <span class="show-card__rating">★ ★ ★</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENTAJAS -->
+    <section class="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Ventajas Competitivas</span>
+          <h2 class="section-title" id="why-title">¿Por qué <span class="text-gradient">elegirnos</span>?</h2>
+        </div>
+
+        <div class="why__grid">
+          <div class="why-card reveal">
+            <span class="why-card__icon">🎨</span>
+            <h3 class="why-card__title">Artistas Profesionales</h3>
+            <p class="why-card__text">Elenco altamente capacitado y personajes 100% originales.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-card__icon">🛡️</span>
+            <h3 class="why-card__title">Seguridad Garantizada</h3>
+            <p class="why-card__text">Compromiso estricto con la seguridad en cada presentación.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-card__icon">️</span>
+            <h3 class="why-card__title">Espectáculos Personalizados</h3>
+            <p class="why-card__text">Servicios adaptables según la necesidad técnica y logística.</p>
+          </div>
+          <div class="why-card reveal">
+            <span class="why-card__icon">🏆</span>
+            <h3 class="why-card__title">Equipo de Calidad</h3>
+            <p class="why-card__text">Experiencia comprobada en eventos públicos y privados a nivel nacional e internacional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <span class="section-tag">Contáctanos</span>
+          <h2 class="section-title" id="contact-title">
+            Hagamos de tu evento algo <span class="text-gradient">extraordinario</span>
+          </h2>
+          <p class="contact__lead">
+            Quedamos a tu completa disposición para sostener una reunión técnica o
+            realizar una presentación visual de nuestro portafolio.
+          </p>
+
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span class="contact__icon">📞</span>
+              <div>
+                <strong>Teléfono / WhatsApp</strong>
+                <a href="tel:+51992034877">992 034 877</a>
+              </div>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">✉️</span>
+              <div>
+                <strong>Correo Electrónico</strong>
+                <a href="mailto:happytimerecreaciones@gmail.com">happytimerecreaciones@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">📍</span>
+              <div>
+                <strong>Dirección</strong>
+                <span>Urb. Cachimayo C-7, Av. La Cultura, San Sebastián, Cusco, Perú</span>
+              </div>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">🏢</span>
+              <div>
+                <strong>RUC</strong>
+                <span>10725032825</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact__socials">
+            <a href="https://wa.me/51992034877" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">💬</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">📘</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="+51 ..." />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Cuéntanos sobre tu evento..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            <span>Enviar mensaje</span>
+            <span class="btn__arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="logo__mark"></span>
+        <strong>Happy Time Entertainment</strong>
+        <p>Cusco, Perú · RUC: 10725032825</p>
+      </div>
+      <div class="site-footer__copy">
+        <p>© 2026 Happy Time Entertainment. Todos los derechos reservados.</p>
+        <p class="site-footer__slogan">Diversión, magia y emoción en cada momento</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/51992034877" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <span class="whatsapp-float__pulse"></span>
+    <span class="whatsapp-float__icon"></span>
+  </a>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
