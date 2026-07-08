@@ -14,7 +14,9 @@
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="icon" href="src/images/favicon.ico">
+    <link rel="icon" type="image/png" href="src/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
+    <link rel="apple-touch-icon" href="src/images/logo.png">
     <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body>
@@ -22,7 +24,10 @@
     <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar" id="navbar">
         <div class="container navbar__inner">
-            <a href="#inicio" class="navbar__logo">HAPPY <span>TIME</span></a>
+            <a href="#inicio" class="navbar__logo" aria-label="Happy Time Entertainment — Inicio">
+                <img src="src/images/logo.png" alt="" class="navbar__logo-img" aria-hidden="true">
+                <span>HAPPY <span>TIME</span></span>
+            </a>
 
             <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span></span><span></span><span></span>
@@ -228,6 +233,7 @@
     <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__brand">
+                <img src="src/images/logo.png" alt="Happy Time Entertainment" class="footer__logo-img">
                 <div class="footer__logo">HAPPY <span>TIME</span></div>
                 <p>Entretenimiento premium en Cusco, Perú. Hacemos de cada evento un momento mágico e inolvidable.</p>
 

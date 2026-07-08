@@ -97,6 +97,9 @@ button {
   justify-content: space-between;
 }
 .navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-family: "Playfair Display", "Cinzel", serif;
   font-weight: 800;
   font-size: 1.3rem;
@@ -107,6 +110,21 @@ button {
 }
 .navbar__logo span {
   color: #F5F0E1;
+}
+.navbar__logo:hover .navbar__logo-img {
+  transform: scale(1.06);
+}
+.navbar__logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (min-width: 900px) {
+  .navbar__logo-img {
+    height: 46px;
+  }
 }
 .navbar__toggle {
   width: 44px;
@@ -218,6 +236,13 @@ button {
   text-align: center;
 }
 
+.footer__brand .footer__logo-img {
+  height: 56px;
+  width: auto;
+  margin: 0 auto 0.75rem;
+  display: block;
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.35));
+}
 .footer__brand .footer__logo {
   font-family: "Playfair Display", "Cinzel", serif;
   font-weight: 800;

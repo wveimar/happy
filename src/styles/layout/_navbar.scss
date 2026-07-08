@@ -33,6 +33,9 @@
     }
 
     &__logo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
         font-family: $font-display;
         font-weight: 800;
         font-size: 1.3rem;
@@ -42,6 +45,20 @@
         z-index: #{$z-navbar + 1};
 
         span { color: $color-cream; }
+
+        &:hover .navbar__logo-img { transform: scale(1.06); }
+    }
+
+    &__logo-img {
+        height: 38px;
+        width: auto;
+        display: block;
+        filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+        transition: transform $transition-base $ease-smooth;
+    }
+
+    @include respond-to('lg') {
+        &__logo-img { height: 46px; }
     }
 
     &__toggle {
