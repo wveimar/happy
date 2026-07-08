@@ -1,0 +1,50 @@
+// =========================================================
+//  BOTÓN CTA — borde oro que se rellena en hover
+// =========================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.btn-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2.6rem;
+    font-family: $font-body;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color-gold;
+    border: 2px solid $color-gold;
+    border-radius: 999px;
+    overflow: hidden;
+    background: transparent;
+    transition: color $transition-base $ease-smooth,
+                transform $transition-base $ease-smooth,
+                box-shadow $transition-base $ease-smooth;
+    z-index: 1;
+
+    // Relleno dorado que crece desde la izquierda
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, $color-gold, $color-gold-bright);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform $transition-base $ease-smooth;
+        z-index: -1;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-black;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        &::before { transform: scaleX(1); }
+    }
+
+    &:active { transform: scale(0.97); }
+}

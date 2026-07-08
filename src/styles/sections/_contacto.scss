@@ -1,0 +1,94 @@
+// =========================================================
+//  CONTACTO
+// =========================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.contacto {
+    background: $color-black;
+}
+
+.contacto__inner {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.contacto__info {
+    p { color: $color-text-muted; margin-bottom: 1.5rem; }
+
+    .contacto__item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        color: $color-cream;
+
+        i { color: $color-gold; font-size: 1.2rem; width: 1.5rem; text-align: center; }
+        a:hover { color: $color-gold; }
+    }
+}
+
+.contacto__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 2rem 1.5rem;
+    @include glass-card(rgba(212, 175, 55, 0.25));
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        label {
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            color: $color-text-muted;
+            text-transform: uppercase;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: $radius-sm;
+            color: $color-cream;
+            font-family: $font-body;
+            font-size: 1rem;
+            transition: border-color $transition-base, box-shadow $transition-base;
+
+            &::placeholder { color: rgba(245, 240, 225, 0.4); }
+            &:focus {
+                outline: none;
+                border-color: $color-gold;
+                box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+            }
+        }
+
+        textarea { resize: vertical; min-height: 120px; }
+    }
+}
+
+// WhatsApp flotante
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    @include flex-center;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    font-size: 1.7rem;
+    color: #fff;
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+    z-index: $z-whatsapp;
+    transition: transform $transition-base;
+
+    &:hover { transform: scale(1.08); }
+}
+
+@include respond-to('sm') {
+    .contacto__inner { grid-template-columns: 1fr 1fr; align-items: start; }
+}

@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "sass": "sass src/styles/styles.scss src/styles/styles.css",
-    "sass:watch": "sass --watch src/styles/styles.scss:src/styles/styles.css"
+    "sass": "sass src/styles/main.scss src/styles/styles.css --no-source-map",
+    "sass:watch": "sass --watch src/styles/main.scss:src/styles/styles.css --no-source-map"
   },
   "keywords": [],
   "author": "",

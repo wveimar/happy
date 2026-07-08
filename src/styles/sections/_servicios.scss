@@ -1,0 +1,22 @@
+// =========================================================
+//  SERVICIOS
+// =========================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.servicios {
+    background: linear-gradient(180deg, $color-black, #140404);
+}
+
+.servicios__grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@include respond-to('sm') {
+    .servicios__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@include respond-to('xl') {
+    .servicios__grid { grid-template-columns: repeat(4, 1fr); }
+}

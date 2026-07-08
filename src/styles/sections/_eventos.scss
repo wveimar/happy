@@ -1,0 +1,22 @@
+// =========================================================
+//  EVENTOS (grid de espectáculos)
+// =========================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.eventos {
+    background: #140404;
+}
+
+.eventos__grid {
+    display: grid;
+    gap: 1.75rem;
+}
+
+@include respond-to('sm') {
+    .eventos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@include respond-to('xl') {
+    .eventos__grid { grid-template-columns: repeat(3, 1fr); }
+}

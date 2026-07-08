@@ -1,0 +1,141 @@
+// =========================================================
+//  NAVBAR — fija, transparente -> sólida al hacer scroll
+// =========================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.navbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: $z-navbar;
+    padding: 1.25rem 0;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background $transition-base $ease-smooth,
+                backdrop-filter $transition-base $ease-smooth,
+                box-shadow $transition-base $ease-smooth,
+                padding $transition-base $ease-smooth,
+                border-color $transition-base $ease-smooth;
+
+    &.scrolled {
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+        border-bottom-color: rgba(212, 175, 55, 0.25);
+        padding: 0.75rem 0;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        font-family: $font-display;
+        font-weight: 800;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        color: $color-gold;
+        text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+        z-index: #{$z-navbar + 1};
+
+        span { color: $color-cream; }
+    }
+
+    &__toggle {
+        width: 44px;
+        height: 44px;
+        @include flex-center;
+        flex-direction: column;
+        gap: 5px;
+        z-index: #{$z-navbar + 1};
+        border-radius: $radius-sm;
+        background: rgba(255, 255, 255, 0.05);
+
+        span {
+            width: 22px;
+            height: 2px;
+            background: $color-cream;
+            border-radius: 2px;
+            transition: transform $transition-base, opacity $transition-base;
+        }
+
+        &[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        &[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        &[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
+    &__menu {
+        position: fixed;
+        inset: 0;
+        @include flex-center;
+        background: rgba(10, 10, 10, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $transition-base, visibility $transition-base;
+
+        &.is-open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+        text-align: center;
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $color-cream;
+        position: relative;
+        transition: color $transition-base;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, $color-gold, $color-gold-bright);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform $transition-base $ease-smooth;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-gold;
+            &::after { transform: scaleX(1); transform-origin: left; }
+        }
+    }
+
+    // Escritorio: menú en línea, sin hamburguesa
+    @include respond-to('lg') {
+        &__toggle { display: none; }
+
+        &__menu {
+            position: static;
+            background: transparent;
+            backdrop-filter: none;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+        &__link { font-size: 0.95rem; }
+    }
+}

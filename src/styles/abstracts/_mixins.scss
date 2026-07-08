@@ -1,0 +1,30 @@
+// =========================================================
+//  MIXINS REUTILIZABLES
+// =========================================================
+@use 'sass:map';
+@use '../abstracts/variables' as *;
+
+// Media query Mobile-First: @include respond-to('lg') { ... }
+@mixin respond-to($name) {
+    @if map.has-key($breakpoints, $name) {
+        @media (min-width: map.get($breakpoints, $name)) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint `#{$name}` no existe. Usa: sm, md, lg, xl, xxl.";
+    }
+}
+
+// Centrado flex rápido
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Contenedor con borde y fondo translúcido (tarjetas)
+@mixin glass-card($border-color: rgba(212, 175, 55, 0.2)) {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+}

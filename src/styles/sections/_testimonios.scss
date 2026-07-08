@@ -1,0 +1,18 @@
+// =========================================================
+//  TESTIMONIOS
+// =========================================================
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.testimonios {
+    background: linear-gradient(180deg, #140404, $color-black);
+}
+
+.testimonios__grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@include respond-to('sm') {
+    .testimonios__grid { grid-template-columns: repeat(3, 1fr); }
+}

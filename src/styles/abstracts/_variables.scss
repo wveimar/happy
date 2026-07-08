@@ -1,0 +1,40 @@
+// =========================================================
+//  VARIABLES GLOBALES — Happy Time Entertainment
+//  Paleta circo de lujo: rojo carmesí + oro sobre negro
+// =========================================================
+
+// ---------- Colores ----------
+$color-crimson:      #8B0000; // Rojo carmesí profundo (acentos, fondos)
+$color-crimson-dark: #5C0000; // Rojo aún más oscuro (degradados, footer)
+$color-gold:         #D4AF37; // Oro cálido (bordes, textos destacados)
+$color-gold-bright:  #FFD700; // Oro brillante (glow, hovers)
+$color-black:        #0A0A0A; // Negro azabache (fondos de sección)
+$color-cream:        #F5F0E1; // Blanco roto (tipografía principal)
+$color-text-muted:   rgba(245, 240, 225, 0.7); // Crema atenuado (texto secundario)
+
+// ---------- Tipografía ----------
+$font-display: 'Playfair Display', 'Cinzel', serif; // Títulos elegantes
+$font-body:    'Montserrat', sans-serif;            // Texto general
+
+// ---------- Radios (bordes redondeados) ----------
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+
+// ---------- Transiciones ----------
+$ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+$transition-base: 0.4s;
+
+// ---------- Capas (z-index) ----------
+$z-navbar:    1000;
+$z-whatsapp:  900;
+$z-overlay:   2;
+
+// ---------- Breakpoints (Mobile-First) ----------
+$breakpoints: (
+    'sm': 640px,
+    'md': 768px,
+    'lg': 900px,
+    'xl': 1024px,
+    'xxl': 1280px
+);

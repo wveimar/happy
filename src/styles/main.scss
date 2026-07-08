@@ -1,0 +1,28 @@
+// =========================================================
+//  HAPPY TIME ENTERTAINMENT — Estilos principales
+//  Arquitectura SCSS (Mobile-First, circo de lujo)
+//  Orden de capas: abstracts → base → layout → components → sections
+// =========================================================
+
+// --- Abstracts (variables y mixins) ---
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// --- Base (reset + tipografía/utilidades) ---
+@use 'base/reset';
+@use 'base/typography';
+
+// --- Layout (estructura global) ---
+@use 'layout/navbar';
+@use 'layout/footer';
+
+// --- Components (piezas reutilizables) ---
+@use 'components/buttons';
+@use 'components/cards';
+
+// --- Sections (bloques de página) ---
+@use 'sections/hero';
+@use 'sections/servicios';
+@use 'sections/eventos';
+@use 'sections/testimonios';
+@use 'sections/contacto';
