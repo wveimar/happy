@@ -1,28 +1,40 @@
-// Configuración de animaciones de entrada fluidas al hacer scroll (ScrollReveal)
+// Happy Time Entertainment — interacciones de UI
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Configuración base
-    const sr = ScrollReveal({
-        origin: 'bottom',
-        distance: '40px',
-        duration: 1000,
-        delay: 200,
-        reset: false
+
+    // --- Navbar: transparente -> sólida al hacer scroll ---
+    const navbar = document.getElementById('navbar');
+    const onScroll = () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // --- Menú móvil (hamburguesa) ---
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+
+    const closeMenu = () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+    };
+
+    toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('is-open', !open);
     });
 
-    // Animación de la sección Hero
-    sr.reveal('.marquee-container', { origin: 'top', duration: 1200 });
-    sr.reveal('.ribbon-banner', { scale: 0.9, delay: 400 });
-    sr.reveal('.hero-description', { delay: 500 });
-    sr.reveal('.feature-item', { interval: 150, delay: 600 });
-    sr.reveal('.contact-bar', { origin: 'bottom', delay: 800 });
-
-    // Animación de las tarjetas de espectáculos de manera secuencial
-    sr.reveal('.section-title-ribbon', { origin: 'top' });
-    sr.reveal('.show-card', { 
-        interval: 200, 
-        distance: '50px',
-        scale: 0.95
+    // Cerrar al hacer clic en un enlace
+    menu.querySelectorAll('.navbar__link').forEach(link => {
+        link.addEventListener('click', closeMenu);
     });
-    sr.reveal('.shows-footer', { delay: 400 });
+
+    // Cerrar al redimensionar a escritorio
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 900) closeMenu();
+    });
 });

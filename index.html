@@ -3,161 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Time Entertainment</title>
-    <!-- Fuentes estilo Circo / Vintage y Elegant -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome para los Iconos de Redes y Características -->
+    <title>Happy Time Entertainment · Cusco, Perú</title>
+    <meta name="description" content="Happy Time Entertainment — Espectáculos y entretenimiento premium en Cusco, Perú. Shows de lujo, payasos, luces, fuego y más.">
+
+    <!-- Fuentes: Playfair Display (display), Cinzel (logo), Montserrat (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="src/images/favicon.ico">
     <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body>
 
-   
-   <!-- HERO SECTION (Sección Superior) -->
-<header class="hero-section">
-    <div class="overlay"></div>
-    <div class="main-container">
-        
-        <!-- Letrero Principal con tu imagen transparente -->
-        <div class="marquee-container">
-            <div class="marquee-halo"></div>
-            <img src="src/images/hero.jpeg" alt="Happy Time Entertainment Logo" class="main-logo-img">
-        </div>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#inicio" class="navbar__logo">HAPPY <span>TIME</span></a>
 
-        <!-- Cintilla Promocional -->
-        <div class="ribbon-banner">
-            <div class="ribbon-content">
-                <h3>HACEMOS DE TU EVENTO UN MOMENTO INOLVIDABLE</h3>
-            </div>
-        </div>
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
 
-        <p class="hero-description">
-            Creamos experiencias únicas llenas de magia, diversión y emoción. Contamos con espectáculos para todo tipo de eventos y públicos.
-        </p>
-
-        <!-- Características / Badges -->
-        <div class="features-grid">
-            <div class="feature-item">
-                <i class="fa-solid fa-user-tie"></i>
-                <div>
-                    <h4>ARTISTAS</h4>
-                    <p>PROFESIONALES</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <div>
-                    <h4>SEGURIDAD</h4>
-                    <p>GARANTIZADA</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <i class="fa-solid fa-star"></i>
-                <div>
-                    <h4>ESPECTÁCULOS</h4>
-                    <p>PERSONALIZADOS</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <i class="fa-solid fa-award"></i>
-                <div>
-                    <h4>EQUIPO DE</h4>
-                    <p>CALIDAD</p>
-                </div>
+            <div class="navbar__menu" id="navMenu">
+                <ul class="navbar__list">
+                    <li><a href="#inicio" class="navbar__link">Inicio</a></li>
+                    <li><a href="#servicios" class="navbar__link">Servicios</a></li>
+                    <li><a href="#eventos" class="navbar__link">Eventos</a></li>
+                    <li><a href="#testimonios" class="navbar__link">Testimonios</a></li>
+                    <li><a href="#contacto" class="navbar__link">Contacto</a></li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- Barra de Contacto Directo -->
-        <div class="contact-bar">
-            <a href="https://wa.me/51992034877" target="_blank" class="contact-link whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> 992-03-4877
+    <!-- ===================== HERO ===================== -->
+    <header class="hero" id="inicio">
+        <div class="hero__content">
+            <span class="hero__tag">Entretenimiento de Lujo · Cusco, Perú</span>
+            <h1 class="hero__title">
+                Hacemos de tu evento
+                <span>un momento inolvidable</span>
+            </h1>
+            <p class="hero__subtitle">
+                Creamos experiencias únicas llenas de magia, diversión y emoción.
+                Espectáculos personalizados para todo tipo de eventos y públicos.
+            </p>
+            <a href="#contacto" class="btn-cta">
+                <i class="fa-solid fa-star"></i> Contáctanos
             </a>
-            <a href="#" class="contact-link facebook">
-                <i class="fa-brands fa-facebook-f"></i> Happy Time Entertainment
-            </a>
-            <a href="#" class="contact-link instagram">
-                <i class="fa-brands fa-instagram"></i> Happy Time Entertainment
-            </a>
-            <span class="contact-link location">
-                <i class="fa-solid fa-location-dot"></i> Cusco, Perú
-            </span>
         </div>
-    </div>
-</header>
 
-    <!-- SHOWS SECTION (Sección Inferior) -->
-    <section class="shows-section">
-        <div class="shows-paper-bg">
-            
-            <div class="section-title-ribbon">
-                <h2>NUESTROS ESPECTÁCULOS</h2>
-            </div>
+        <div class="hero__scroll">
+            Desliza
+            <span></span>
+        </div>
+    </header>
 
-            <div class="shows-grid">
-                <!-- Tarjeta 1 -->
-                <div class="show-card">
-                    <div class="image-container">
-                        <img src="src/images/payasos.jpeg" alt="Show de Payasos" loading="lazy">
-                        <div class="card-ribbon">SHOW DE PAYASOS</div>
-                    </div>
-                    <p>Risas aseguradas con nuestros divertidos payasos llenos de humor, juegos y sorpresas.</p>
+    <!-- ===================== SERVICIOS ===================== -->
+    <section class="section servicios" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Servicios</span></h2>
+            <p class="section-subtitle">Profesionalismo y pasión en cada detalle para que tu evento sea perfecto.</p>
+
+            <div class="servicios__grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-user-tie feature-card__icon"></i>
+                    <h3 class="feature-card__title">Artistas Profesionales</h3>
+                    <p class="feature-card__text">Elenco experto y capacitado para cualquier tipo de público.</p>
                 </div>
-
-                <!-- Tarjeta 2 -->
-                <div class="show-card">
-                    <div class="image-container">
-                        <img src="src/images/luces.jpeg" alt="Show de Luces" loading="lazy">
-                        <div class="card-ribbon">SHOW DE LUCES</div>
-                    </div>
-                    <p>Impactantes coreografías con luces LED, acrobacias y efectos visuales que deslumbran a todos.</p>
+                <div class="feature-card">
+                    <i class="fa-solid fa-shield-halved feature-card__icon"></i>
+                    <h3 class="feature-card__title">Seguridad Garantizada</h3>
+                    <p class="feature-card__text">Protocolos y supervisión en cada espectáculo.</p>
                 </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="show-card">
-                    <div class="image-container">
-                        <img src="src/images/luces.jpeg" alt="Zancos" loading="lazy">
-                        <div class="card-ribbon long-text">ZANCOS Y PERSONAJES TEMÁTICOS EN ZANCOS</div>
-                    </div>
-                    <p>Imponentes zanquistas y personajes temáticos que llenan de color, elegancia y fantasía tu evento.</p>
+                <div class="feature-card">
+                    <i class="fa-solid fa-star feature-card__icon"></i>
+                    <h3 class="feature-card__title">Espectáculos Personalizados</h3>
+                    <p class="feature-card__text">Diseñamos la experiencia a tu medida.</p>
                 </div>
-
-                <!-- Tarjeta 4 -->
-                <div class="show-card">
-                    <div class="image-container">
-                        <img src="src/images/baileFuego.jpeg" alt="Show de Fuego" loading="lazy">
-                        <div class="card-ribbon">SHOW DE FUEGO</div>
-                    </div>
-                    <p>Fuerza, destreza y pasión en un espectáculo lleno de fuego que dejará a todos sin aliento.</p>
+                <div class="feature-card">
+                    <i class="fa-solid fa-award feature-card__icon"></i>
+                    <h3 class="feature-card__title">Equipo de Calidad</h3>
+                    <p class="feature-card__text">Producción premium con estándares de excelencia.</p>
                 </div>
-
-                <!-- Tarjeta 5 -->
-                <div class="show-card">
-                    <div class="image-container">
-                        <img src="src/images/baileFuego.jpeg" alt="Horas Locas" loading="lazy">
-                        <div class="card-ribbon">SHOW DE HORAS LOCAS</div>
-                    </div>
-                    <p>Música, baile, animación y locura garantizada para que nadie se quede sentado.</p>
-                </div>
-
-                <!-- Tarjeta 6 -->
-                <div class="show-card">
-                    <div class="image-container">
-                        <img src="src/images/baileFuego.jpeg" alt="Y Mucho Más" loading="lazy">
-                        <div class="card-ribbon">Y MUCHO MÁS...</div>
-                    </div>
-                    <p>Nos adaptamos a tu necesidad para crear experiencias únicas e inolvidables.</p>
-                </div>
-            </div>
-
-            <!-- Footer Call to Action -->
-            <div class="shows-footer">
-                <h3>¡CONTÁCTANOS Y HAGAMOS DE TU EVENTO ALGO EXTRAORDINARIO!</h3>
             </div>
         </div>
     </section>
 
-    <!-- Librería ScrollReveal para efectos de entrada profesionales -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- ===================== EVENTOS ===================== -->
+    <section class="section eventos" id="eventos">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Espectáculos</span></h2>
+            <p class="section-subtitle">Una galería de shows que deslumbran y emocionan a todos.</p>
+
+            <div class="eventos__grid">
+                <div class="show-card">
+                    <img src="src/images/payasos.jpeg" alt="Show de Payasos" loading="lazy">
+                    <div class="show-card__ribbon">Show de Payasos</div>
+                    <div class="show-card__body">
+                        <p class="show-card__text">Risas aseguradas con nuestros divertidos payasos llenos de humor, juegos y sorpresas.</p>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <img src="src/images/luces.jpeg" alt="Show de Luces" loading="lazy">
+                    <div class="show-card__ribbon">Show de Luces</div>
+                    <div class="show-card__body">
+                        <p class="show-card__text">Impactantes coreografías con luces LED, acrobacias y efectos visuales que deslumbran.</p>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <img src="src/images/personajes.jpeg" alt="Zancos" loading="lazy">
+                    <div class="show-card__ribbon">Zancos y Personajes</div>
+                    <div class="show-card__body">
+                        <p class="show-card__text">Imponentes zanquistas y personajes temáticos que llenan de color y fantasía tu evento.</p>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <img src="src/images/baileFuego.jpeg" alt="Show de Fuego" loading="lazy">
+                    <div class="show-card__ribbon">Show de Fuego</div>
+                    <div class="show-card__body">
+                        <p class="show-card__text">Fuerza, destreza y pasión en un espectáculo lleno de fuego que deja a todos sin aliento.</p>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <img src="src/images/performance.jpeg" alt="Horas Locas" loading="lazy">
+                    <div class="show-card__ribbon">Show de Horas Locas</div>
+                    <div class="show-card__body">
+                        <p class="show-card__text">Música, baile, animación y locura garantizada para que nadie se quede sentado.</p>
+                    </div>
+                </div>
+
+                <div class="show-card">
+                    <img src="src/images/IMG_0012.JPG.jpeg" alt="Y Mucho Más" loading="lazy">
+                    <div class="show-card__ribbon">Y Mucho Más...</div>
+                    <div class="show-card__body">
+                        <p class="show-card__text">Nos adaptamos a tu necesidad para crear experiencias únicas e inolvidables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <section class="section testimonios" id="testimonios">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen <span>nuestros clientes</span></h2>
+            <p class="section-subtitle">Momentos que quedan grabados para siempre.</p>
+
+            <div class="testimonios__grid">
+                <div class="testimonial">
+                    <p class="testimonial__quote">"Superaron todas nuestras expectativas. El show de fuego fue espectacular."</p>
+                    <div class="testimonial__author">María Fernanda</div>
+                    <div class="testimonial__role">Fiesta de 15 años · Cusco</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial__quote">"Profesionales, puntuales y con un talento increíble. ¡Repetiremos seguro!"</p>
+                    <div class="testimonial__author">Carlos Ramírez</div>
+                    <div class="testimonial__role">Evento Corporativo</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial__quote">"Los niños no paraban de reír con los payasos. Gracias Happy Time."</p>
+                    <div class="testimonial__author">Lucía Quispe</div>
+                    <div class="testimonial__role">Cumpleaños Infantil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section contacto" id="contacto">
+        <div class="container contacto__inner">
+            <div class="contacto__info">
+                <h2 class="section-title" style="text-align:left;">¿Hablamos de tu <span>evento?</span></h2>
+                <p>Cuéntanos tu idea y la hacemos realidad. Estamos en Cusco para llevar magia a todo el Perú.</p>
+
+                <div class="contacto__item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/51992034877" target="_blank">+51 992 03 4877</a>
+                </div>
+                <div class="contacto__item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Cusco, Perú</span>
+                </div>
+                <div class="contacto__item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@happytime.pe">info@happytime.pe</a>
+                </div>
+
+                <a href="https://wa.me/51992034877" target="_blank" class="btn-cta" style="margin-top:1rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Escríbenos por WhatsApp
+                </a>
+            </div>
+
+            <form class="contacto__form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu evento..." required></textarea>
+                </div>
+                <button type="submit" class="btn-cta">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">HAPPY <span>TIME</span></div>
+                <p>Entretenimiento premium en Cusco, Perú. Hacemos de cada evento un momento mágico e inolvidable.</p>
+
+                <div class="footer__socials">
+                    <a href="#" class="social-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-btn tiktok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="footer__col-title">Enlaces Rápidos</h3>
+                <div class="footer__links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#eventos">Eventos</a>
+                    <a href="#testimonios">Testimonios</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="footer__col-title">Contacto</h3>
+                <div class="footer__links">
+                    <a href="https://wa.me/51992034877" target="_blank">WhatsApp: 992 03 4877</a>
+                    <a href="mailto:info@happytime.pe">info@happytime.pe</a>
+                    <span style="color:#F5F0E1; font-size:0.9rem;">Cusco, Perú</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>© 2026 Happy Time Entertainment. Todos los derechos reservados.</p>
+            <p>Cusco, Perú · Magia y espectáculo en cada evento.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/51992034877" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
     <script src="src/js/main.js"></script>
 </body>
 </html>
